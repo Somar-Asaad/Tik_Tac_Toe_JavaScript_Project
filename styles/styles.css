@@ -1,0 +1,203 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+}
+
+h1 {
+  margin: 0;
+}
+
+ol {
+  padding-left: 0;
+}
+
+header {
+  background-color: rgb(138, 66, 246);
+  color: white;
+  text-align: center;
+  padding: 1.5rem;
+}
+
+#players-list {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  width:90%;
+  max-width: 45rem;
+  margin: 2rem auto 0px;
+}
+
+.player-list-item {
+  background-color: rgb(234, 228, 243);
+  padding: 1rem 3.5rem;
+  border-radius: 5px;
+  width:50%;
+  box-shadow: 1px 2px 4px grey;
+  text-align: center;
+  margin: 20px;
+}
+
+.player-list-item h3 {
+  font-size: 28px;
+  color: rgb(98, 31, 198);
+  margin: 0;
+}
+
+.player-list-item p {
+  font-size: 35px;
+  font-weight: bold;
+  margin: 10px;
+}
+
+.btn-alt {
+  font: inherit;
+  border: none;
+  background-color: transparent;
+  color: rgb(138, 66, 246);
+  cursor: pointer;
+  padding: 10px 25px;
+  border-radius: 3px;
+}
+
+.btn-alt:hover {
+  background-color: rgb(203, 188, 226);
+}
+
+#game-configuration {
+  text-align: center;
+}
+
+#start-game-board {
+  text-align: center;
+  display: none;
+}
+
+#start-game-button {
+  margin: 0 auto 2rem;
+}
+
+#player-turn {
+  font-size: 1.2rem;
+}
+
+.btn {
+  background-color: rgb(138, 66, 246);
+  font: inherit;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 10px 25px;
+  border-radius: 3px;
+}
+
+.btn:hover {
+  background-color: rgb(173, 121, 251);
+}
+
+#game-board {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 6rem);
+  grid-template-rows: repeat(3, 6rem);
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 1rem 0;
+  padding: 0;
+}
+
+#game-board li {
+  background-color: rgb(234, 228, 243);
+  font-size: 3rem;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#game-board li:hover {
+  background-color: rgb(112, 13, 204);
+}
+
+#game-board li.played-item {
+  background-color: rgb(138, 66, 246);
+  cursor: default;
+  color: white;
+}
+
+#backdrop {
+  background-color: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  height: 100%;
+  width: 100%;
+}
+
+#modal {
+  position: fixed;
+  background-color: white;
+  top: 20%;
+  left: 5%;
+  width: 90%;
+  padding: 1rem;
+  border-radius: 5px;
+  text-align: center;
+  display: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+@media (min-width: 48rem) {
+  #modal {
+    left: calc(50% - 20rem);
+    width: 40rem;
+  }
+}
+
+#modal h2 {
+  margin: 10px auto;
+  padding: 0;
+  font-size: 1.5rem;
+}
+
+#modal label {
+  display: block;
+  margin: 5px auto;
+  font-weight: bold;
+}
+
+#modal input {
+  width: 40%;
+  padding: 5px;
+  border-radius: 5px;
+  margin: 10px auto 15px;
+  border: 1.5px solid rgb(219, 216, 216);
+}
+
+.error label {
+  color: rgb(136, 2, 2);
+}
+
+.error input {
+  background-color: rgb(253, 219, 219);
+  color: rgb(136, 2, 2);
+  color: rgb(136, 2, 2);
+}
+
+#error-text {
+  display: none;
+}
+
+#result {
+  background-color: blueviolet;
+  border-radius: 5px;
+  padding: 20px;
+  text-align: center;
+  margin: auto;
+  width: 50%;
+  color: wheat;
+  display: none;
+}
